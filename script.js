@@ -14,16 +14,28 @@
         toggleActive()
         checkNav()
     })
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            toggleActive()
-            checkNav()
-            nav.classList.remove('--active')
+
+    const mediaQuery1024 = window.matchMedia("(max-width: 1024px)")
+    if (mediaQuery1024.matches) {
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleActive()
+                checkNav()
+                nav.classList.remove('--active')
+            })
         })
-    })
+    } else {
+        links.forEach(link => {
+            link.removeEventListener('click', () => {
+                toggleActive()
+                checkNav()
+                nav.classList.remove('--active')
+            })
+        })
+    }
 
 
-    const mediaQuery1024 = window.matchMedia('(max-width: 1024px)')
+
     //navigation
     function checkNav() {
         if (nav.classList.contains('--active')) {
