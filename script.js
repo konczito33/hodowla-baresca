@@ -10,13 +10,14 @@
         sections = document.querySelectorAll('section'),
         bubble = document.querySelector('.bubble')
 
-    burger.addEventListener('click', () => {
-        toggleActive()
-        checkNav()
-    })
+
 
     const mediaQuery = window.matchMedia('(max-width: 1024px)')
     mediaQuery.addEventListener('change', () => {
+        burger.addEventListener('click', () => {
+            toggleActive()
+            checkNav()
+        })
         links.forEach(link => {
             link.addEventListener('click', () => {
                 toggleActive()
