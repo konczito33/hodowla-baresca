@@ -16,9 +16,9 @@
     })
 
     const mediaQuery1024 = window.matchMedia("(max-width: 1024px)")
-    mediaQuery1024.addEventListener('change', links)
+    mediaQuery1024.addEventListener('change', linksFunc)
 
-    function links() {
+    function linksFunc() {
         if (mediaQuery1024.matches) {
             links.forEach(link => {
                 link.addEventListener('click', () => {
