@@ -1,0 +1,88 @@
+.about-breed {
+    scroll-margin: 10vh;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 20% 1fr 1fr 20%;
+    align-items: center;
+    background-color: var(--light-gray);
+
+    &__image {
+        grid-column: 3/4;
+        justify-self: end;
+    }
+
+    &__title {
+        font-size: var(--title);
+        padding: 50px 0;
+    }
+
+    &__content {
+        font-size: var(--content);
+        opacity: .7;
+    }
+}
+
+.about-breed__container {
+    grid-column: 2/3;
+    padding-bottom: 200px;
+}
+
+@media(max-width: 1500px) {
+    .about-breed {
+        grid-template-columns: 10% 1fr 1fr 10%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .about-breed {
+        &__image {
+            width: 90%;
+        }
+    }
+
+    .about-breed__container {
+        padding-bottom: 100px;
+    }
+}
+
+@media(max-height: 800px) {
+    .about-breed {
+        &__image {
+            width: 60%;
+        }
+    }
+
+    .about-breed__container {
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 736px) {
+    .about-breed {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__container {
+            text-align: center;
+            margin: 0 10%;
+            padding: 20px 0;
+        }
+
+        &__title {
+            font-size: var(--phone-title);
+            padding: 20px 0;
+        }
+
+        &__content {
+            font-size: var(--phone-content);
+        }
+
+        &__image {
+            width: 70%;
+            padding: 20px 0;
+        }
+    }
+}

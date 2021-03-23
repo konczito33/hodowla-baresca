@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-size: 62.5%;
+    --black: #1f1f1f;
+    --light-gray: #EAEAEA;
+    --dark-gray: #ddd;
+    --white: #fff;
+    --title: 4rem;
+    --content: 2rem;
+    --footer: 1.5rem;
+    --phone-content: 1.5rem;
+    --phone-title: 2.5rem;
+    --contact-mobile: 1.2rem;
+    --burger-time: .3s;
+}
+
+body,
+html {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--light-gray);
+}
+
+.page {
+    position: absolute;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import 'header';
+@import 'main';
+@import 'about-us';
+@import 'about-breed';
+@import 'litters';
+@import 'cats';
+@import 'contact';
+@import 'gallery';
