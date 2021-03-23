@@ -10,22 +10,20 @@
         sections = document.querySelectorAll('section'),
         bubble = document.querySelector('.bubble')
 
-
-
-    const mediaQuery = window.matchMedia('(max-width: 1024px)')
-    mediaQuery.addEventListener('change', () => {
-        burger.addEventListener('click', () => {
+    burger.addEventListener('click', () => {
+        toggleActive()
+        checkNav()
+    })
+    links.forEach(link => {
+        link.addEventListener('click', () => {
             toggleActive()
             checkNav()
-        })
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                toggleActive()
-                checkNav()
-                nav.classList.remove('--active')
-            })
+            nav.classList.remove('--active')
         })
     })
+
+
+    const mediaQuery1024 = window.matchMedia('(max-width: 1024px)')
     //navigation
     function checkNav() {
         if (nav.classList.contains('--active')) {
