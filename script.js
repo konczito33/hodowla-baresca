@@ -26,8 +26,6 @@
             })
         })
     })
-
-    console.log(window.innerWidth)
     //navigation
     function checkNav() {
         if (nav.classList.contains('--active')) {
