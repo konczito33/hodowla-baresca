@@ -1,7 +1,6 @@
 (function init() {
     const burger = document.getElementById('burger'),
         header = document.getElementById('header'),
-        galleryBtns = document.querySelectorAll('#gallery'),
         nav = document.getElementById('nav'),
         logo = document.getElementById('logo'),
         inners = document.querySelectorAll('#inner'),
